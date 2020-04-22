@@ -3,6 +3,11 @@
   padding: 0px;
   box-sizing: border-box;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -50,18 +55,15 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
   .nav-links {
-    position: absolute;
+    position: fixed;
     right: 0px;
     height: 92vh;
     top: 8vh;
     background-color: #5d4954;
     display: flex;
     flex-direction: column;
-    align-items: center;1
+    align-items: center;
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
@@ -88,13 +90,12 @@ nav {
   }
 }
 
-.toggle .line1{
-transform: rotate(-45deg) translate(-10px,6px);
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-10px, 6px);
 }
-.toggle .line2{
-    opacity: 0;
+.toggle .line2 {
+  opacity: 0;
 }
-.toggle .line3{
-    transform: rotate(45deg) translate(-4px,0px);
-
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, 0px);
 }
